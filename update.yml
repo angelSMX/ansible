@@ -1,5 +1,5 @@
 ---
-- hosts: centos-cli:!foo.uu.se
+- hosts: actualizacion
   gather_facts: no
   tasks:
  
