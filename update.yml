@@ -1,0 +1,12 @@
+---
+- hosts: centos-cli:!foo.uu.se
+  gather_facts: no
+  tasks:
+ 
+  - name: upgrade all packages
+    yum: name='*' state=latest
+
+
+  - name: Wait for computer to reboot...
+    pause: seconds=60
+    when: rebooting|changed
